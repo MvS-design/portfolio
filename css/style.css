@@ -2,13 +2,17 @@
     margin: 0;
 }
 
+/* ===================ALGEMEEN=================== */
 html, body {
     width:100%;
     font-family: 'Open Sans', sans-serif;
     color: rgba(39, 38, 38, 1);
-    /* background-color: lightcyan; */
 }
 
+main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 header, footer {
     width: 100%;
@@ -24,10 +28,49 @@ header {
     position: fixed;
 }
 
-main {
-    padding-left: 10%;
-    padding-right: 10%;
+/* -------------------KOPPEN & TEKST------------- */
+h1 {
+    color: rgba(39, 38, 38, 1);
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 10rem;
+    font-weight: 500;
+    text-align: right;
 }
+
+h2 {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 8em;
+    font-weight: 400;
+    letter-spacing: 3.50px;
+}
+    
+
+h3 {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-weight: 900; 
+}
+
+.tekst {
+    line-height: 1.8;
+}
+
+.tekst a {
+    color: rgba(39, 38, 38, 1); 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tekst a:hover {
+    color: #000;
+    font-weight: 800;
+}
+
+/* -------------------EINDE KOPPEN & TEKST------------- */
+/* ===================EINDE ALGEMEEN=================== */
+
+
+/* ===============HEADER=============== */
 
 /* -------NAV ------- */
 .nav {
@@ -107,9 +150,9 @@ li a {
   }
 
 /* -------EINDE NAV ------- */
+/* ===============EINDE HEADER=============== */
 
-
-/* -----------------FOOTER -------------- */
+/* ===============FOOTER=============== */
 
 .ftr {
     display: flex;
@@ -125,14 +168,12 @@ li a {
 .ftr-tekst {
     margin: 0px 140px;
     margin-left: 10%;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 500;
     color: rgba(39, 38, 38, 0.3);
 }
 
 .ftr-icons {
-    /* margin: 0; */
-    /* padding: 0; */
     margin: 0px 140px;
     margin-right: 10%;
     font-size: 1.5rem;
@@ -161,49 +202,9 @@ i:hover {
     cursor: pointer;
 }
 
-/* -----------------EINDE FOOTER -------------- */
+/* ===============EINDE FOOTER =============== */
 
-/* ------------------ALGEMEEN---------------- */
-
-h1 {
-    color: rgba(39, 38, 38, 1);
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    font-size: 10rem;
-    font-weight: 500;
-    text-align: right;
-}
-
-h2 {
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    font-size: 8em;
-    font-weight: 400;
-    letter-spacing: 3.50px;
-}
-    
-
-h3 {
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    font-size: 48px;
-    font-weight: 900; 
-}
-
-.tekst {
-    line-height: 1.8;
-}
-
-.tekst a {
-    color: rgba(39, 38, 38, 1); 
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.tekst a:hover {
-    color: #000;
-    font-weight: 800;
-}
-/* ------------------EINDE ALGEMEEN---------------- */
-
-/* --------------------BUTTONS----------------- */
+/* ===============BUTTONS=============== */
 
   .custom-btn {
     width: 140px;
@@ -265,22 +266,21 @@ h3 {
     
   }
   
-/* --------------------EINDE BUTTONS----------------- */
+/* ===============EINDE BUTTONS=============== */
 
 
- /* -------------GRID---------------- */
+
+ /* ++++++++++++++++++GRID++++++++++++++++++ */
 
 .grid-container {
-    /* background-color: rgb(245, 195, 245);
-    border: 2px solid rgb(245, 13, 148); */
     display: grid;
-    grid-gap: 16px;
+    grid-gap: 1rem;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(140px, auto);
-    grid-template-areas: 
+    /* grid-template-areas: 
         "header" 
         "main" 
-        "footer";   
+        "footer";    */
 }
 
 .header {
@@ -298,28 +298,16 @@ h3 {
     grid-row: 3/4;
 }
 
+/* ------------SUB GRIDS------------ */
 .part1, .part2, .part3, .part4 {
-    /* background-color: rgb(139, 224, 196); */
-    /* border: 2px solid #22eedd; */
-    /* border-radius: 5px; */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 16px;
+    grid-gap: 1rem;
     justify-items: stretch;
     grid-column: 1/-1;
 }
 
-/* .part1 {
-    padding-top: 140px;
-} */
-
-/* .afb, .kop, .amp, .subkop, .tekst { */
-    /* background-color: rgb(240, 241, 181); */
-    /* border: 2px solid #0feb2c;
-    border-radius: 5px;
-} */
-
-.kop, .amp, .subkop, .tekst {
+.kop, .subkop, .tekst {
     z-index:10;
 }
 
@@ -327,16 +315,7 @@ h3 {
     opacity: 10%;
 }
 
-/* ----------------------- */
-
-/* .divider {
-    background-color: rgb(181, 109, 240);
-    border: 2px solid #dce013;
-    border-radius: 5px;
-    height: 400px;
-   
-} */
-
+/* ---------DIVIDERS-------------- */
 
 .divider1, .divider3 {
     height: 400px;
@@ -362,8 +341,9 @@ h3 {
     height: 600px;
 }
 
-/* ----------------------- */
+/* ---------EINDE DIVIDERS-------------- */
 
+/* ---------PARTS--------- */
 
 .afb1 {
     grid-column: 7/-1;
@@ -378,6 +358,7 @@ h3 {
 }
 
 .kop1 {
+    padding-top: 5rem;
     grid-column: 1/10;
     grid-row: 2/3;
 }
@@ -392,7 +373,7 @@ h3 {
 }
 
 .subkop1 {
-    MARGIN-TOP: 16px;
+    margin-top: 1rem;
     grid-column: 3/6;
     grid-row: 4/5;
 }
@@ -410,12 +391,12 @@ h3 {
 }
 
 .img-amp2 {
-    height: 100%;
+    /* height: 100%; */
     width:100%;
 }
 
 .kop2 {
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
     grid-column: 8/-1;
     grid-row: 1/2;
 }
@@ -432,6 +413,10 @@ h3 {
 
 /* ---------------------- */
 
+.part3 {
+    justify-items: center;
+}
+
 .amp3 {
     grid-column: 1/-1;
     grid-row: 1/6;
@@ -442,21 +427,22 @@ h3 {
 }
 
 .subkop3 {
+    justify-self: start;
     grid-column: 3/8;
     grid-row: 1/2;
 }
 
 .tekst3 {
-    padding-bottom: 80px;;
+    padding-bottom: 5rem;
     grid-column: 3/8;
     grid-row: 2/3;
 }
 
 .afb2 {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px 200px; 
-    grid-gap: 16px;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 1rem;
 
     margin-top: 100px;
     margin-bottom: 100px;
@@ -468,8 +454,6 @@ h3 {
 }
 
 .img-grid:after {
-    /* background-color: rgb(234, 201, 247);
-    border: 2px solid #81f0c2;     */
     content: attr(data-description);
     visibility: hidden;
     display: block;
@@ -477,7 +461,7 @@ h3 {
     bottom: -20px;
     padding: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
     transition: all .5s ease-in-out;
@@ -504,7 +488,7 @@ h3 {
     transform:scale(1.5);
     }
 
-.img-grid1-1 {
+/* .img-grid1-1 {
     grid-column: 1/2;
     grid-row: 1/2;
 }
@@ -582,7 +566,7 @@ h3 {
 .img-grid4-4 {
     grid-column: 4/5;
     grid-row: 4/5;
-}
+} */
 
 
 /* ---------------------- */
@@ -623,7 +607,7 @@ h3 {
     grid-column: 6/11;
     grid-row: 4/5;
 }
-
+/* ---------EINDE PARTS--------- */
 /* ---------------------- */
 
 /* !!!NOG TOEVOEGEN: MEDIA QUERIES!!! */
